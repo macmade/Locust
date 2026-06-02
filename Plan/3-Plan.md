@@ -24,6 +24,25 @@ This plan is based on `Plan/1-Prompt.md` and the answers in `Plan/2-Questions.md
 
 ## Proposed Architecture
 
+### Coding Style
+
+- Prefer functional sequence operations such as `forEach`, `map`, `compactMap`, `filter`, `reduce`, and `sorted` over plain `for` loops when transforming or scanning collections.
+- Prefer `reduce` or `reduce(into:)` for stateful collection-building logic instead of declaring mutable accumulator variables in the calling function.
+- Keep functional code readable. If stateful accumulation is needed, make the state explicit and use focused helper methods rather than dense nested closures.
+- Avoid introducing helper state types for small single-use transformations unless they materially improve readability or are reused.
+- Define shared configuration values for special tokens and other domain strings. Do not inline magic token values such as `<unk>`, `<bos>`, or `<eos>` in production code or tests.
+- Use plain loops only when they make low-level numerical code materially clearer, especially in later `Math` and `Layers` implementations. In those cases, keep the loop local and covered by focused tests.
+
+### Naming Conventions
+
+- Name capability protocols with gerund-style names when that reads naturally, such as `Tokenizing` and `Detokenizing`.
+- Name concrete implementations by combining the strategy or scope with the capability, such as `WordTokenizer` and `WordDetokenizer`.
+- Keep paired concepts symmetrical. If a tokenizer implementation uses a scope prefix such as `Word`, the corresponding detokenizer implementation should use the same prefix.
+- Name test files and test types after the concrete behavior under test, such as `WordTokenizerTests` and `WordDetokenizerTests`.
+- Avoid generic concrete names such as `Tokenizer` or `Detokenizer` unless there is intentionally only one implementation and no meaningful strategy distinction.
+- Keep protocols in a `Protocols` subdirectory within their domain directory, such as `Text/Protocols/Tokenizing.swift`, so capability contracts are easy to find separately from concrete implementations.
+- Keep protocols focused on required behavior, not concrete configuration details. Prefer initializer dependency injection on concrete implementations for strategy-specific rules such as punctuation spacing and special tokens.
+
 ### Target Boundaries
 
 `Locust` executable:
@@ -54,52 +73,112 @@ This plan is based on `Plan/1-Prompt.md` and the answers in `Plan/2-Questions.md
 - Focus first on tokenizer, vocabulary, dataset generation, serialization round trips, deterministic sampling, and model behavior.
 - Add transformer math and gradient tests when transformer components are introduced.
 
-### Initial Library Modules
+### Source Layout
 
-Suggested files under `LocustKit`:
+`LocustKit` should use domain-oriented subdirectories instead of keeping every source file at the target root. Keep the directory names stable and small enough that each group has a clear responsibility:
 
-- `Token.swift`
-- `Tokenizer.swift`
-- `WordTokenizer.swift`
-- `Detokenizer.swift`
-- `Vocabulary.swift`
-- `Dataset.swift`
-- `SeededRandomNumberGenerator.swift`
-- `Sampling.swift`
-- `LanguageModel.swift`
-- `NGramLanguageModel.swift`
-- `TrainingConfiguration.swift`
-- `TrainingProgress.swift`
-- `ModelSerializer.swift`
-- `JSONModelSerializer.swift`
-- `BinaryModelSerializer.swift`
-- `ModelFile.swift`
-- `LocustError.swift`
+```text
+LocustKit/
+  Core/
+    LocustError.swift
+  Text/
+    Protocols/
+      Detokenizing.swift
+      Tokenizing.swift
+    PunctuationSpacing.swift
+    SpecialTokens.swift
+    Token.swift
+    Vocabulary.swift
+    WordDetokenizer.swift
+    WordTokenizer.swift
+  Data/
+    Dataset.swift
+    TrainingExample.swift
+  Random/
+    Sampling.swift
+    SeededRandomNumberGenerator.swift
+  Models/
+    LanguageModel.swift
+    NGramLanguageModel.swift
+    TransformerLanguageModel.swift
+  Training/
+    Loss.swift
+    Optimizer.swift
+    TrainingConfiguration.swift
+    TrainingProgress.swift
+  Serialization/
+    BinaryModelSerializer.swift
+    JSONModelSerializer.swift
+    ModelFile.swift
+    ModelSerializer.swift
+  Math/
+    Math.swift
+    Matrix.swift
+    Vector.swift
+  Layers/
+    Embedding.swift
+    FeedForward.swift
+    LayerNorm.swift
+    Linear.swift
+    SelfAttention.swift
+    Softmax.swift
+    TransformerBlock.swift
+```
 
-Later transformer-oriented files:
+Guidelines:
 
-- `Vector.swift`
-- `Matrix.swift`
-- `Math.swift`
-- `Embedding.swift`
-- `LayerNorm.swift`
-- `Linear.swift`
-- `Softmax.swift`
-- `SelfAttention.swift`
-- `FeedForward.swift`
-- `TransformerBlock.swift`
-- `TransformerLanguageModel.swift`
-- `Optimizer.swift`
-- `Loss.swift`
+- `Core` is for shared errors and small cross-cutting primitives only.
+- `Text` owns tokenization, detokenization, special token definitions, and vocabulary mapping.
+- Domain protocols should live under a `Protocols` subdirectory inside the owning domain, such as `Text/Protocols`.
+- `Data` owns conversion from token IDs into supervised training windows.
+- `Random` owns deterministic randomness and sampling policies.
+- `Models` owns model protocols and concrete language-model implementations.
+- `Training` owns training configuration, progress reporting, optimizers, and loss functions.
+- `Serialization` owns versioned model file envelopes and format-specific readers/writers.
+- `Math` and `Layers` should remain transformer-focused and should not be introduced until the transformer milestones need them.
+- Avoid nesting more deeply until a directory becomes genuinely hard to scan.
+- Keep Swift file references ordered alphabetically in every Xcode group whenever files are added, renamed, or moved.
+
+Tests should mirror the production layout where practical:
+
+```text
+LocustKitTests/
+  Text/
+    PunctuationSpacingTests.swift
+    SpecialTokensTests.swift
+    VocabularyTests.swift
+    WordDetokenizerTests.swift
+    WordTokenizerTests.swift
+  Data/
+    DatasetTests.swift
+  Random/
+    SamplingTests.swift
+    SeededRandomNumberGeneratorTests.swift
+  Models/
+    NGramLanguageModelTests.swift
+  Serialization/
+    JSONModelSerializerTests.swift
+    BinaryModelSerializerTests.swift
+  Math/
+    MatrixTests.swift
+    VectorTests.swift
+  Layers/
+    SelfAttentionTests.swift
+```
 
 ### Core Protocols
 
 Use small protocols where they clarify boundaries and tests:
 
 ```swift
-public protocol Tokenizer
+public protocol Tokenizing
 {
     func tokenize(_ text: String) -> [String]
+}
+
+public protocol Detokenizing
+{
+    func detokenize(_ tokens: [String]) -> String
 }
 
 public protocol LanguageModel
@@ -155,6 +234,10 @@ Use simple output reconstruction:
 - Do not print `<bos>`.
 - Stop before printing `<eos>`.
 - Print `<unk>` only if it appears in generated output.
+- Keep special tokens in a small configuration value such as `SpecialTokens`.
+- Inject special tokens into components that need them, with a default Locust token set for `<unk>`, `<bos>`, and `<eos>`.
+- Keep punctuation spacing rules in a small configuration value such as `PunctuationSpacing`.
+- Inject punctuation spacing into `WordDetokenizer` through its initializer, with a sensible default for English-like text.
 
 ### Vocabulary
 
@@ -327,6 +410,8 @@ The binary reader should validate:
 
 ## Test-First Milestones
 
+Unit tests should live in focused files named after the production type or behavior they cover, such as `Text/WordTokenizerTests.swift` and `Text/WordDetokenizerTests.swift`. Prefer mirroring the `LocustKit` source directories in `LocustKitTests`; avoid collecting unrelated test suites in a generic shared test file.
+
 ### Milestone 1: Tokenizer And Detokenizer
 
 Tests first:
@@ -339,9 +424,11 @@ Tests first:
 
 Implementation:
 
-- Add tokenizer protocol.
+- Add tokenizer protocol under `Text/Protocols`.
 - Add `WordTokenizer`.
-- Add detokenizer.
+- Add detokenizer protocol under `Text/Protocols`.
+- Add punctuation spacing configuration for detokenization.
+- Add `WordDetokenizer`.
 
 ### Milestone 2: Vocabulary
 
@@ -532,4 +619,3 @@ Use these defaults unless implementation work reveals a concrete reason to adjus
 - Determinism can be accidentally broken. Mitigation: centralize RNG use and test seeded behavior.
 - CLI testing can be awkward. Mitigation: keep command parsing and command execution separable, and inject input/output for REPL tests.
 - Tokenization choices affect model quality. Mitigation: keep tokenizer behavior simple and well tested, then evolve it intentionally later if needed.
-
