@@ -22,7 +22,11 @@
  * THE SOFTWARE.
  ******************************************************************************/
 
-import Foundation
-import LocustKit
+import Testing
 
-Locust.test()
+struct Foo
+{
+    @Test
+    func bar() async throws
+    {}
+}

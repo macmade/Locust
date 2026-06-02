@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "6818BA2F-A5FD-4617-8F52-E0131CD45607",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "performanceAntipatternCheckerEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Locust.xcodeproj",
+        "identifier" : "05AFE3272FCF35A400624811",
+        "name" : "LocustKitTests"
+      }
+    }
+  ],
+  "version" : 1
+}

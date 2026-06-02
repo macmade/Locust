@@ -8,7 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		05AFE28F2FCEBA8B00624811 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AFE28D2FCEBA8B00624811 /* main.swift */; };
+		05AFE3222FCF34D700624811 /* libLocustKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AFE2CC2FCEBC0900624811 /* libLocustKit.a */; };
+		05AFE3232FCF357C00624811 /* Locust.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AFE2D62FCEBC2900624811 /* Locust.swift */; };
+		05AFE32C2FCF35A400624811 /* libLocustKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AFE2CC2FCEBC0900624811 /* libLocustKit.a */; };
+		05AFE3342FCF35A900624811 /* LocustKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AFE3322FCF35A900624811 /* LocustKitTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		05AFE31F2FCF34D300624811 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05AFE23E2FCEB8A700624811 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05AFE2CB2FCEBC0900624811;
+			remoteInfo = LocustKit;
+		};
+		05AFE32D2FCF35A400624811 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05AFE23E2FCEB8A700624811 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05AFE2CB2FCEBC0900624811;
+			remoteInfo = LocustKit;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		05AFE2442FCEB8A700624811 /* CopyFiles */ = {
@@ -74,6 +95,11 @@
 		05AFE2C42FCEBB3C00624811 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		05AFE2C52FCEBB3C00624811 /* Release - ccache.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Release - ccache.xcconfig"; sourceTree = "<group>"; };
 		05AFE2C62FCEBB3C00624811 /* Release - Library.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Release - Library.xcconfig"; sourceTree = "<group>"; };
+		05AFE2CC2FCEBC0900624811 /* libLocustKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLocustKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		05AFE2D62FCEBC2900624811 /* Locust.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locust.swift; sourceTree = "<group>"; };
+		05AFE3282FCF35A400624811 /* LocustKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocustKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		05AFE3322FCF35A900624811 /* LocustKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocustKitTests.swift; sourceTree = "<group>"; };
+		05AFE3352FCF367400624811 /* LocustKitTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = LocustKitTests.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +107,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05AFE3222FCF34D700624811 /* libLocustKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05AFE2CA2FCEBC0900624811 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05AFE3252FCF35A400624811 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05AFE32C2FCF35A400624811 /* libLocustKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,8 +135,12 @@
 				05AFE2542FCEBA7000624811 /* README.md */,
 				05AFE2522FCEBA7000624811 /* CODE_OF_CONDUCT.md */,
 				05AFE2532FCEBA7000624811 /* LICENSE */,
+				05AFE3352FCF367400624811 /* LocustKitTests.xctestplan */,
 				05AFE2C72FCEBB3C00624811 /* xcconfig */,
 				05AFE28E2FCEBA8B00624811 /* Locust */,
+				05AFE2D52FCEBC2200624811 /* LocustKit */,
+				05AFE3332FCF35A900624811 /* LocustKitTests */,
+				05AFE3212FCF34D700624811 /* Frameworks */,
 				05AFE2472FCEB8A700624811 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				05AFE2462FCEB8A700624811 /* Locust */,
+				05AFE2CC2FCEBC0900624811 /* libLocustKit.a */,
+				05AFE3282FCF35A400624811 /* LocustKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -241,7 +289,40 @@
 			path = Submodules/xcconfig;
 			sourceTree = "<group>";
 		};
+		05AFE2D52FCEBC2200624811 /* LocustKit */ = {
+			isa = PBXGroup;
+			children = (
+				05AFE2D62FCEBC2900624811 /* Locust.swift */,
+			);
+			path = LocustKit;
+			sourceTree = "<group>";
+		};
+		05AFE3212FCF34D700624811 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		05AFE3332FCF35A900624811 /* LocustKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				05AFE3322FCF35A900624811 /* LocustKitTests.swift */,
+			);
+			path = LocustKitTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		05AFE2C82FCEBC0900624811 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		05AFE2452FCEB8A700624811 /* Locust */ = {
@@ -255,6 +336,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				05AFE3202FCF34D300624811 /* PBXTargetDependency */,
 			);
 			name = Locust;
 			packageProductDependencies = (
@@ -262,6 +344,45 @@
 			productName = Locust;
 			productReference = 05AFE2462FCEB8A700624811 /* Locust */;
 			productType = "com.apple.product-type.tool";
+		};
+		05AFE2CB2FCEBC0900624811 /* LocustKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05AFE2D22FCEBC0900624811 /* Build configuration list for PBXNativeTarget "LocustKit" */;
+			buildPhases = (
+				05AFE2C82FCEBC0900624811 /* Headers */,
+				05AFE2C92FCEBC0900624811 /* Sources */,
+				05AFE2CA2FCEBC0900624811 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LocustKit;
+			packageProductDependencies = (
+			);
+			productName = LocustKit;
+			productReference = 05AFE2CC2FCEBC0900624811 /* libLocustKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		05AFE3272FCF35A400624811 /* LocustKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05AFE32F2FCF35A400624811 /* Build configuration list for PBXNativeTarget "LocustKitTests" */;
+			buildPhases = (
+				05AFE3242FCF35A400624811 /* Sources */,
+				05AFE3252FCF35A400624811 /* Frameworks */,
+				05AFE3262FCF35A400624811 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05AFE32E2FCF35A400624811 /* PBXTargetDependency */,
+			);
+			name = LocustKitTests;
+			packageProductDependencies = (
+			);
+			productName = LocustKitTests;
+			productReference = 05AFE3282FCF35A400624811 /* LocustKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -274,6 +395,12 @@
 				LastUpgradeCheck = 2630;
 				TargetAttributes = {
 					05AFE2452FCEB8A700624811 = {
+						CreatedOnToolsVersion = 26.3;
+					};
+					05AFE2CB2FCEBC0900624811 = {
+						CreatedOnToolsVersion = 26.3;
+					};
+					05AFE3272FCF35A400624811 = {
 						CreatedOnToolsVersion = 26.3;
 					};
 				};
@@ -293,9 +420,21 @@
 			projectRoot = "";
 			targets = (
 				05AFE2452FCEB8A700624811 /* Locust */,
+				05AFE2CB2FCEBC0900624811 /* LocustKit */,
+				05AFE3272FCF35A400624811 /* LocustKitTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		05AFE3262FCF35A400624811 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		05AFE2422FCEB8A700624811 /* Sources */ = {
@@ -306,15 +445,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05AFE2C92FCEBC0900624811 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05AFE3232FCF357C00624811 /* Locust.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05AFE3242FCF35A400624811 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05AFE3342FCF35A900624811 /* LocustKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		05AFE3202FCF34D300624811 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05AFE2CB2FCEBC0900624811 /* LocustKit */;
+			targetProxy = 05AFE31F2FCF34D300624811 /* PBXContainerItemProxy */;
+		};
+		05AFE32E2FCF35A400624811 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05AFE2CB2FCEBC0900624811 /* LocustKit */;
+			targetProxy = 05AFE32D2FCF35A400624811 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		05AFE24B2FCEB8A700624811 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 05AFE2BF2FCEBB3C00624811 /* Debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 326Y53CJMD;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
 			};
 			name = Debug;
 		};
@@ -322,8 +491,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 05AFE2C42FCEBB3C00624811 /* Release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 326Y53CJMD;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
 			};
 			name = Release;
 		};
@@ -337,6 +507,48 @@
 		05AFE24F2FCEB8A700624811 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		05AFE2D32FCEBC0900624811 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		05AFE2D42FCEBC0900624811 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		05AFE3302FCF35A400624811 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.LocustKitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		05AFE3312FCF35A400624811 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.LocustKitTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -358,6 +570,24 @@
 			buildConfigurations = (
 				05AFE24E2FCEB8A700624811 /* Debug */,
 				05AFE24F2FCEB8A700624811 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05AFE2D22FCEBC0900624811 /* Build configuration list for PBXNativeTarget "LocustKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05AFE2D32FCEBC0900624811 /* Debug */,
+				05AFE2D42FCEBC0900624811 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05AFE32F2FCF35A400624811 /* Build configuration list for PBXNativeTarget "LocustKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05AFE3302FCF35A400624811 /* Debug */,
+				05AFE3312FCF35A400624811 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

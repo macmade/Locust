@@ -23,6 +23,11 @@
  ******************************************************************************/
 
 import Foundation
-import LocustKit
 
-Locust.test()
+open class Locust
+{
+    public class func test()
+    {
+        print( "hello, world" )
+    }
+}
