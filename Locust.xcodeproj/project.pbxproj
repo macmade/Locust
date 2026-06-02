@@ -45,6 +45,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0585BFD52FCF659E001AFA3E /* bloodborne-npc-dialogues.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bloodborne-npc-dialogues.txt"; sourceTree = "<group>"; };
 		05AFE2462FCEB8A700624811 /* Locust */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Locust; sourceTree = BUILT_PRODUCTS_DIR; };
 		05AFE2522FCEBA7000624811 /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
 		05AFE2532FCEBA7000624811 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -131,6 +132,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0585BFD62FCF659E001AFA3E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0585BFD52FCF659E001AFA3E /* bloodborne-npc-dialogues.txt */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		05AFE23D2FCEB8A700624811 = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +151,7 @@
 				05AFE28E2FCEBA8B00624811 /* Locust */,
 				05AFE2D52FCEBC2200624811 /* LocustKit */,
 				05AFE3332FCF35A900624811 /* LocustKitTests */,
+				0585BFD62FCF659E001AFA3E /* Data */,
 				05AFE3212FCF34D700624811 /* Frameworks */,
 				05AFE2472FCEB8A700624811 /* Products */,
 			);
