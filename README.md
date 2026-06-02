@@ -114,7 +114,9 @@ Development Notes
 - The project currently targets macOS 15.6 through the existing Xcode project settings.
 - `swift-argument-parser` is available in the Xcode project and is the planned CLI parser.
 - Tests should stay focused on `LocustKit` behavior and mirror the production source layout where practical.
-- The implementation plan lives in `Plan/3-Plan.md`.
+- `Plan/1-Prompt.md` contains the original project prompt.
+- `Plan/2-Questions.md` contains clarifying answers and implementation decisions.
+- `Plan/3-Plan.md` contains the implementation plan and milestones.
 
 License
 -------
