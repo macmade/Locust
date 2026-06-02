@@ -24,5 +24,6 @@
 
 import Foundation
 import LocustKit
+import ArgumentParser
 
 Locust.test()

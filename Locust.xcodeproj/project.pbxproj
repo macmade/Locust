@@ -12,6 +12,7 @@
 		05AFE3232FCF357C00624811 /* Locust.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AFE2D62FCEBC2900624811 /* Locust.swift */; };
 		05AFE32C2FCF35A400624811 /* libLocustKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AFE2CC2FCEBC0900624811 /* libLocustKit.a */; };
 		05AFE3342FCF35A900624811 /* LocustKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AFE3322FCF35A900624811 /* LocustKitTests.swift */; };
+		05AFE3372FCF5C9000624811 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 05AFE3382FCF5C9000624811 /* ArgumentParser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05AFE3222FCF34D700624811 /* libLocustKit.a in Frameworks */,
+				05AFE3372FCF5C9000624811 /* ArgumentParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +342,7 @@
 			);
 			name = Locust;
 			packageProductDependencies = (
+				05AFE3382FCF5C9000624811 /* ArgumentParser */,
 			);
 			productName = Locust;
 			productReference = 05AFE2462FCEB8A700624811 /* Locust */;
@@ -414,6 +417,9 @@
 			);
 			mainGroup = 05AFE23D2FCEB8A700624811;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				05AFE3362FCF599A00624811 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 05AFE2472FCEB8A700624811 /* Products */;
 			projectDirPath = "";
@@ -593,6 +599,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		05AFE3362FCF599A00624811 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		05AFE3382FCF5C9000624811 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05AFE3362FCF599A00624811 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 05AFE23E2FCEB8A700624811 /* Project object */;
 }
