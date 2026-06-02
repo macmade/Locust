@@ -1,0 +1,368 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05AFE28F2FCEBA8B00624811 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AFE28D2FCEBA8B00624811 /* main.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		05AFE2442FCEB8A700624811 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		05AFE2462FCEB8A700624811 /* Locust */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Locust; sourceTree = BUILT_PRODUCTS_DIR; };
+		05AFE2522FCEBA7000624811 /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
+		05AFE2532FCEBA7000624811 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		05AFE2542FCEBA7000624811 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		05AFE28D2FCEBA8B00624811 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		05AFE2902FCEBB3C00624811 /* FUNDING.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = FUNDING.yml; sourceTree = "<group>"; };
+		05AFE2922FCEBB3C00624811 /* C++.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "C++.xcconfig"; sourceTree = "<group>"; };
+		05AFE2932FCEBB3C00624811 /* Modules.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Modules.xcconfig; sourceTree = "<group>"; };
+		05AFE2942FCEBB3C00624811 /* Objective-C.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Objective-C.xcconfig"; sourceTree = "<group>"; };
+		05AFE2962FCEBB3C00624811 /* All-Languages.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "All-Languages.xcconfig"; sourceTree = "<group>"; };
+		05AFE2972FCEBB3C00624811 /* C++.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "C++.xcconfig"; sourceTree = "<group>"; };
+		05AFE2982FCEBB3C00624811 /* Objective-C.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Objective-C.xcconfig"; sourceTree = "<group>"; };
+		05AFE2992FCEBB3C00624811 /* Objective-C-ARC.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Objective-C-ARC.xcconfig"; sourceTree = "<group>"; };
+		05AFE29B2FCEBB3C00624811 /* Address-Sanitizer.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Address-Sanitizer.xcconfig"; sourceTree = "<group>"; };
+		05AFE29C2FCEBB3C00624811 /* Code-Generation.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Code-Generation.xcconfig"; sourceTree = "<group>"; };
+		05AFE29D2FCEBB3C00624811 /* Language.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Language.xcconfig; sourceTree = "<group>"; };
+		05AFE29E2FCEBB3C00624811 /* Preprocessing.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Preprocessing.xcconfig; sourceTree = "<group>"; };
+		05AFE29F2FCEBB3C00624811 /* Undefined-Behavior-Sanitizer.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Undefined-Behavior-Sanitizer.xcconfig"; sourceTree = "<group>"; };
+		05AFE2A02FCEBB3C00624811 /* Warning-Policies.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Warning-Policies.xcconfig"; sourceTree = "<group>"; };
+		05AFE2A12FCEBB3C00624811 /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
+		05AFE2A32FCEBB3C00624811 /* Analysis-Policy.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Analysis-Policy.xcconfig"; sourceTree = "<group>"; };
+		05AFE2A42FCEBB3C00624811 /* Apple-APIs.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Apple-APIs.xcconfig"; sourceTree = "<group>"; };
+		05AFE2A52FCEBB3C00624811 /* Generic-Issues.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Generic-Issues.xcconfig"; sourceTree = "<group>"; };
+		05AFE2A62FCEBB3C00624811 /* Objective-C.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Objective-C.xcconfig"; sourceTree = "<group>"; };
+		05AFE2A72FCEBB3C00624811 /* Security.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Security.xcconfig; sourceTree = "<group>"; };
+		05AFE2A92FCEBB3C00624811 /* Issues.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Issues.xcconfig; sourceTree = "<group>"; };
+		05AFE2AB2FCEBB3C00624811 /* Code-Generation.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Code-Generation.xcconfig"; sourceTree = "<group>"; };
+		05AFE2AC2FCEBB3C00624811 /* General.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = General.xcconfig; sourceTree = "<group>"; };
+		05AFE2AD2FCEBB3C00624811 /* Language.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Language.xcconfig; sourceTree = "<group>"; };
+		05AFE2AE2FCEBB3C00624811 /* Warnings-Policies.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Warnings-Policies.xcconfig"; sourceTree = "<group>"; };
+		05AFE2B02FCEBB3C00624811 /* Apple-LLVM.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Apple-LLVM.xcconfig"; sourceTree = "<group>"; };
+		05AFE2B12FCEBB3C00624811 /* Architectures.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Architectures.xcconfig; sourceTree = "<group>"; };
+		05AFE2B22FCEBB3C00624811 /* Build-Options.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Build-Options.xcconfig"; sourceTree = "<group>"; };
+		05AFE2B32FCEBB3C00624811 /* Deployment.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Deployment.xcconfig; sourceTree = "<group>"; };
+		05AFE2B42FCEBB3C00624811 /* Search-Paths.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Search-Paths.xcconfig"; sourceTree = "<group>"; };
+		05AFE2B52FCEBB3C00624811 /* Signing.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Signing.xcconfig; sourceTree = "<group>"; };
+		05AFE2B62FCEBB3C00624811 /* Static-Analyzer.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Static-Analyzer.xcconfig"; sourceTree = "<group>"; };
+		05AFE2B72FCEBB3C00624811 /* Swift-Compiler.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Swift-Compiler.xcconfig"; sourceTree = "<group>"; };
+		05AFE2B92FCEBB3C00624811 /* ccache.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ccache.sh; sourceTree = "<group>"; };
+		05AFE2BA2FCEBB3C00624811 /* ccache-config.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "ccache-config.sh"; sourceTree = "<group>"; };
+		05AFE2BC2FCEBB3C00624811 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		05AFE2BD2FCEBB3C00624811 /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
+		05AFE2BE2FCEBB3C00624811 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		05AFE2BF2FCEBB3C00624811 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		05AFE2C02FCEBB3C00624811 /* Debug - ccache.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Debug - ccache.xcconfig"; sourceTree = "<group>"; };
+		05AFE2C12FCEBB3C00624811 /* Debug - Library.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Debug - Library.xcconfig"; sourceTree = "<group>"; };
+		05AFE2C22FCEBB3C00624811 /* Debug - zld.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Debug - zld.xcconfig"; sourceTree = "<group>"; };
+		05AFE2C32FCEBB3C00624811 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		05AFE2C42FCEBB3C00624811 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		05AFE2C52FCEBB3C00624811 /* Release - ccache.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Release - ccache.xcconfig"; sourceTree = "<group>"; };
+		05AFE2C62FCEBB3C00624811 /* Release - Library.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Release - Library.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05AFE2432FCEB8A700624811 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05AFE23D2FCEB8A700624811 = {
+			isa = PBXGroup;
+			children = (
+				05AFE2542FCEBA7000624811 /* README.md */,
+				05AFE2522FCEBA7000624811 /* CODE_OF_CONDUCT.md */,
+				05AFE2532FCEBA7000624811 /* LICENSE */,
+				05AFE2C72FCEBB3C00624811 /* xcconfig */,
+				05AFE28E2FCEBA8B00624811 /* Locust */,
+				05AFE2472FCEB8A700624811 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		05AFE2472FCEB8A700624811 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05AFE2462FCEB8A700624811 /* Locust */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		05AFE28E2FCEBA8B00624811 /* Locust */ = {
+			isa = PBXGroup;
+			children = (
+				05AFE28D2FCEBA8B00624811 /* main.swift */,
+			);
+			path = Locust;
+			sourceTree = "<group>";
+		};
+		05AFE2912FCEBB3C00624811 /* .github */ = {
+			isa = PBXGroup;
+			children = (
+				05AFE2902FCEBB3C00624811 /* FUNDING.yml */,
+			);
+			path = .github;
+			sourceTree = "<group>";
+		};
+		05AFE2952FCEBB3C00624811 /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				05AFE2922FCEBB3C00624811 /* C++.xcconfig */,
+				05AFE2932FCEBB3C00624811 /* Modules.xcconfig */,
+				05AFE2942FCEBB3C00624811 /* Objective-C.xcconfig */,
+			);
+			path = Language;
+			sourceTree = "<group>";
+		};
+		05AFE29A2FCEBB3C00624811 /* Warnings */ = {
+			isa = PBXGroup;
+			children = (
+				05AFE2962FCEBB3C00624811 /* All-Languages.xcconfig */,
+				05AFE2972FCEBB3C00624811 /* C++.xcconfig */,
+				05AFE2982FCEBB3C00624811 /* Objective-C.xcconfig */,
+				05AFE2992FCEBB3C00624811 /* Objective-C-ARC.xcconfig */,
+			);
+			path = Warnings;
+			sourceTree = "<group>";
+		};
+		05AFE2A22FCEBB3C00624811 /* Apple-LLVM */ = {
+			isa = PBXGroup;
+			children = (
+				05AFE2952FCEBB3C00624811 /* Language */,
+				05AFE29A2FCEBB3C00624811 /* Warnings */,
+				05AFE29B2FCEBB3C00624811 /* Address-Sanitizer.xcconfig */,
+				05AFE29C2FCEBB3C00624811 /* Code-Generation.xcconfig */,
+				05AFE29D2FCEBB3C00624811 /* Language.xcconfig */,
+				05AFE29E2FCEBB3C00624811 /* Preprocessing.xcconfig */,
+				05AFE29F2FCEBB3C00624811 /* Undefined-Behavior-Sanitizer.xcconfig */,
+				05AFE2A02FCEBB3C00624811 /* Warning-Policies.xcconfig */,
+				05AFE2A12FCEBB3C00624811 /* Warnings.xcconfig */,
+			);
+			path = "Apple-LLVM";
+			sourceTree = "<group>";
+		};
+		05AFE2A82FCEBB3C00624811 /* Issues */ = {
+			isa = PBXGroup;
+			children = (
+				05AFE2A32FCEBB3C00624811 /* Analysis-Policy.xcconfig */,
+				05AFE2A42FCEBB3C00624811 /* Apple-APIs.xcconfig */,
+				05AFE2A52FCEBB3C00624811 /* Generic-Issues.xcconfig */,
+				05AFE2A62FCEBB3C00624811 /* Objective-C.xcconfig */,
+				05AFE2A72FCEBB3C00624811 /* Security.xcconfig */,
+			);
+			path = Issues;
+			sourceTree = "<group>";
+		};
+		05AFE2AA2FCEBB3C00624811 /* Static-Analyzer */ = {
+			isa = PBXGroup;
+			children = (
+				05AFE2A82FCEBB3C00624811 /* Issues */,
+				05AFE2A92FCEBB3C00624811 /* Issues.xcconfig */,
+			);
+			path = "Static-Analyzer";
+			sourceTree = "<group>";
+		};
+		05AFE2AF2FCEBB3C00624811 /* Swift-Compiler */ = {
+			isa = PBXGroup;
+			children = (
+				05AFE2AB2FCEBB3C00624811 /* Code-Generation.xcconfig */,
+				05AFE2AC2FCEBB3C00624811 /* General.xcconfig */,
+				05AFE2AD2FCEBB3C00624811 /* Language.xcconfig */,
+				05AFE2AE2FCEBB3C00624811 /* Warnings-Policies.xcconfig */,
+			);
+			path = "Swift-Compiler";
+			sourceTree = "<group>";
+		};
+		05AFE2B82FCEBB3C00624811 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				05AFE2A22FCEBB3C00624811 /* Apple-LLVM */,
+				05AFE2AA2FCEBB3C00624811 /* Static-Analyzer */,
+				05AFE2AF2FCEBB3C00624811 /* Swift-Compiler */,
+				05AFE2B02FCEBB3C00624811 /* Apple-LLVM.xcconfig */,
+				05AFE2B12FCEBB3C00624811 /* Architectures.xcconfig */,
+				05AFE2B22FCEBB3C00624811 /* Build-Options.xcconfig */,
+				05AFE2B32FCEBB3C00624811 /* Deployment.xcconfig */,
+				05AFE2B42FCEBB3C00624811 /* Search-Paths.xcconfig */,
+				05AFE2B52FCEBB3C00624811 /* Signing.xcconfig */,
+				05AFE2B62FCEBB3C00624811 /* Static-Analyzer.xcconfig */,
+				05AFE2B72FCEBB3C00624811 /* Swift-Compiler.xcconfig */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		05AFE2BB2FCEBB3C00624811 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				05AFE2B92FCEBB3C00624811 /* ccache.sh */,
+				05AFE2BA2FCEBB3C00624811 /* ccache-config.sh */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		05AFE2C72FCEBB3C00624811 /* xcconfig */ = {
+			isa = PBXGroup;
+			children = (
+				05AFE2912FCEBB3C00624811 /* .github */,
+				05AFE2B82FCEBB3C00624811 /* Common */,
+				05AFE2BB2FCEBB3C00624811 /* Scripts */,
+				05AFE2BC2FCEBB3C00624811 /* .gitignore */,
+				05AFE2BD2FCEBB3C00624811 /* CODE_OF_CONDUCT.md */,
+				05AFE2BE2FCEBB3C00624811 /* Common.xcconfig */,
+				05AFE2BF2FCEBB3C00624811 /* Debug.xcconfig */,
+				05AFE2C02FCEBB3C00624811 /* Debug - ccache.xcconfig */,
+				05AFE2C12FCEBB3C00624811 /* Debug - Library.xcconfig */,
+				05AFE2C22FCEBB3C00624811 /* Debug - zld.xcconfig */,
+				05AFE2C32FCEBB3C00624811 /* README.md */,
+				05AFE2C42FCEBB3C00624811 /* Release.xcconfig */,
+				05AFE2C52FCEBB3C00624811 /* Release - ccache.xcconfig */,
+				05AFE2C62FCEBB3C00624811 /* Release - Library.xcconfig */,
+			);
+			name = xcconfig;
+			path = Submodules/xcconfig;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		05AFE2452FCEB8A700624811 /* Locust */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05AFE24D2FCEB8A700624811 /* Build configuration list for PBXNativeTarget "Locust" */;
+			buildPhases = (
+				05AFE2422FCEB8A700624811 /* Sources */,
+				05AFE2432FCEB8A700624811 /* Frameworks */,
+				05AFE2442FCEB8A700624811 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Locust;
+			packageProductDependencies = (
+			);
+			productName = Locust;
+			productReference = 05AFE2462FCEB8A700624811 /* Locust */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		05AFE23E2FCEB8A700624811 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2630;
+				LastUpgradeCheck = 2630;
+				TargetAttributes = {
+					05AFE2452FCEB8A700624811 = {
+						CreatedOnToolsVersion = 26.3;
+					};
+				};
+			};
+			buildConfigurationList = 05AFE2412FCEB8A700624811 /* Build configuration list for PBXProject "Locust" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 05AFE23D2FCEB8A700624811;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 05AFE2472FCEB8A700624811 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				05AFE2452FCEB8A700624811 /* Locust */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		05AFE2422FCEB8A700624811 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05AFE28F2FCEBA8B00624811 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		05AFE24B2FCEB8A700624811 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05AFE2BF2FCEBB3C00624811 /* Debug.xcconfig */;
+			buildSettings = {
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		05AFE24C2FCEB8A700624811 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05AFE2C42FCEBB3C00624811 /* Release.xcconfig */;
+			buildSettings = {
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Release;
+		};
+		05AFE24E2FCEB8A700624811 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		05AFE24F2FCEB8A700624811 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05AFE2412FCEB8A700624811 /* Build configuration list for PBXProject "Locust" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05AFE24B2FCEB8A700624811 /* Debug */,
+				05AFE24C2FCEB8A700624811 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05AFE24D2FCEB8A700624811 /* Build configuration list for PBXNativeTarget "Locust" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05AFE24E2FCEB8A700624811 /* Debug */,
+				05AFE24F2FCEB8A700624811 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 05AFE23E2FCEB8A700624811 /* Project object */;
+}
