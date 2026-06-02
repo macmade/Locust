@@ -22,6 +22,19 @@
  * THE SOFTWARE.
  ******************************************************************************/
 
-import Foundation
-import LocustKit
-import ArgumentParser
+public struct PunctuationSpacing
+{
+    public let closingWithoutLeadingSpace:  Set< String >
+    public let openingWithoutTrailingSpace: Set< String >
+    
+    public init( closingWithoutLeadingSpace: Set< String >, openingWithoutTrailingSpace: Set< String > )
+    {
+        self.closingWithoutLeadingSpace  = closingWithoutLeadingSpace
+        self.openingWithoutTrailingSpace = openingWithoutTrailingSpace
+    }
+    
+    public static let english = Self(
+        closingWithoutLeadingSpace:  [ ".", ",", "!", "?", ":", ";", ")", "]", "}" ],
+        openingWithoutTrailingSpace: [ "(", "[", "{" ]
+    )
+}

@@ -9,10 +9,18 @@
 /* Begin PBXBuildFile section */
 		05AFE28F2FCEBA8B00624811 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AFE28D2FCEBA8B00624811 /* main.swift */; };
 		05AFE3222FCF34D700624811 /* libLocustKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AFE2CC2FCEBC0900624811 /* libLocustKit.a */; };
-		05AFE3232FCF357C00624811 /* Locust.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AFE2D62FCEBC2900624811 /* Locust.swift */; };
 		05AFE32C2FCF35A400624811 /* libLocustKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AFE2CC2FCEBC0900624811 /* libLocustKit.a */; };
-		05AFE3342FCF35A900624811 /* LocustKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AFE3322FCF35A900624811 /* LocustKitTests.swift */; };
 		05AFE3372FCF5C9000624811 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 05AFE3382FCF5C9000624811 /* ArgumentParser */; };
+		05B000012FCF900000624811 /* Tokenizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B000002FCF900000624811 /* Tokenizing.swift */; };
+		05B000032FCF900000624811 /* WordTokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B000022FCF900000624811 /* WordTokenizer.swift */; };
+		05B000052FCF900000624811 /* WordDetokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B000042FCF900000624811 /* WordDetokenizer.swift */; };
+		05B000072FCFA00000624811 /* WordTokenizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B000062FCFA00000624811 /* WordTokenizerTests.swift */; };
+		05B000092FCFA00000624811 /* WordDetokenizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B000082FCFA00000624811 /* WordDetokenizerTests.swift */; };
+		05B0000D2FCFC00000624811 /* SpecialTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B0000C2FCFC00000624811 /* SpecialTokens.swift */; };
+		05B0000F2FCFD00000624811 /* Detokenizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B0000E2FCFD00000624811 /* Detokenizing.swift */; };
+		05B000122FD0100000624811 /* PunctuationSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B000112FD0100000624811 /* PunctuationSpacing.swift */; };
+		05B000142FD0200000624811 /* SpecialTokensTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B000132FD0200000624811 /* SpecialTokensTests.swift */; };
+		05B000162FD0200000624811 /* PunctuationSpacingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B000152FD0200000624811 /* PunctuationSpacingTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,10 +109,18 @@
 		05AFE2C52FCEBB3C00624811 /* Release - ccache.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Release - ccache.xcconfig"; sourceTree = "<group>"; };
 		05AFE2C62FCEBB3C00624811 /* Release - Library.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Release - Library.xcconfig"; sourceTree = "<group>"; };
 		05AFE2CC2FCEBC0900624811 /* libLocustKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLocustKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		05AFE2D62FCEBC2900624811 /* Locust.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locust.swift; sourceTree = "<group>"; };
 		05AFE3282FCF35A400624811 /* LocustKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocustKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		05AFE3322FCF35A900624811 /* LocustKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocustKitTests.swift; sourceTree = "<group>"; };
 		05AFE3352FCF367400624811 /* LocustKitTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = LocustKitTests.xctestplan; sourceTree = "<group>"; };
+		05B000002FCF900000624811 /* Tokenizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tokenizing.swift; sourceTree = "<group>"; };
+		05B000022FCF900000624811 /* WordTokenizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTokenizer.swift; sourceTree = "<group>"; };
+		05B000042FCF900000624811 /* WordDetokenizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetokenizer.swift; sourceTree = "<group>"; };
+		05B000062FCFA00000624811 /* WordTokenizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTokenizerTests.swift; sourceTree = "<group>"; };
+		05B000082FCFA00000624811 /* WordDetokenizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetokenizerTests.swift; sourceTree = "<group>"; };
+		05B0000C2FCFC00000624811 /* SpecialTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialTokens.swift; sourceTree = "<group>"; };
+		05B0000E2FCFD00000624811 /* Detokenizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detokenizing.swift; sourceTree = "<group>"; };
+		05B000112FD0100000624811 /* PunctuationSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunctuationSpacing.swift; sourceTree = "<group>"; };
+		05B000132FD0200000624811 /* SpecialTokensTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialTokensTests.swift; sourceTree = "<group>"; };
+		05B000152FD0200000624811 /* PunctuationSpacingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunctuationSpacingTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,7 +334,7 @@
 		05AFE2D52FCEBC2200624811 /* LocustKit */ = {
 			isa = PBXGroup;
 			children = (
-				05AFE2D62FCEBC2900624811 /* Locust.swift */,
+				05B0000A2FCFB00000624811 /* Text */,
 			);
 			path = LocustKit;
 			sourceTree = "<group>";
@@ -333,9 +349,41 @@
 		05AFE3332FCF35A900624811 /* LocustKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				05AFE3322FCF35A900624811 /* LocustKitTests.swift */,
+				05B0000B2FCFB00000624811 /* Text */,
 			);
 			path = LocustKitTests;
+			sourceTree = "<group>";
+		};
+		05B0000A2FCFB00000624811 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				05B000102FCFE00000624811 /* Protocols */,
+				05B000112FD0100000624811 /* PunctuationSpacing.swift */,
+				05B0000C2FCFC00000624811 /* SpecialTokens.swift */,
+				05B000042FCF900000624811 /* WordDetokenizer.swift */,
+				05B000022FCF900000624811 /* WordTokenizer.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		05B0000B2FCFB00000624811 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				05B000152FD0200000624811 /* PunctuationSpacingTests.swift */,
+				05B000132FD0200000624811 /* SpecialTokensTests.swift */,
+				05B000082FCFA00000624811 /* WordDetokenizerTests.swift */,
+				05B000062FCFA00000624811 /* WordTokenizerTests.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		05B000102FCFE00000624811 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				05B0000E2FCFD00000624811 /* Detokenizing.swift */,
+				05B000002FCF900000624811 /* Tokenizing.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,7 +527,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05AFE3232FCF357C00624811 /* Locust.swift in Sources */,
+				05B0000F2FCFD00000624811 /* Detokenizing.swift in Sources */,
+				05B000122FD0100000624811 /* PunctuationSpacing.swift in Sources */,
+				05B0000D2FCFC00000624811 /* SpecialTokens.swift in Sources */,
+				05B000012FCF900000624811 /* Tokenizing.swift in Sources */,
+				05B000052FCF900000624811 /* WordDetokenizer.swift in Sources */,
+				05B000032FCF900000624811 /* WordTokenizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,7 +540,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05AFE3342FCF35A900624811 /* LocustKitTests.swift in Sources */,
+				05B000162FD0200000624811 /* PunctuationSpacingTests.swift in Sources */,
+				05B000142FD0200000624811 /* SpecialTokensTests.swift in Sources */,
+				05B000092FCFA00000624811 /* WordDetokenizerTests.swift in Sources */,
+				05B000072FCFA00000624811 /* WordTokenizerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

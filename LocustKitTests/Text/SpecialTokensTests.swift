@@ -23,10 +23,29 @@
  ******************************************************************************/
 
 import Testing
+import LocustKit
 
-struct Foo
+struct SpecialTokensTests
 {
     @Test
-    func bar() async throws
-    {}
+    func providesLocustDefaults() async throws
+    {
+        #expect( SpecialTokens.locust.unknown             == "<unk>" )
+        #expect( SpecialTokens.locust.beginningOfSequence == "<bos>" )
+        #expect( SpecialTokens.locust.endOfSequence       == "<eos>" )
+    }
+    
+    @Test
+    func storesCustomValues() async throws
+    {
+        let specialTokens = SpecialTokens(
+            unknown:             "[unknown]",
+            beginningOfSequence: "[start]",
+            endOfSequence:       "[end]"
+        )
+        
+        #expect( specialTokens.unknown             == "[unknown]" )
+        #expect( specialTokens.beginningOfSequence == "[start]" )
+        #expect( specialTokens.endOfSequence       == "[end]" )
+    }
 }

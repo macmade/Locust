@@ -22,12 +22,22 @@
  * THE SOFTWARE.
  ******************************************************************************/
 
-import Foundation
-
-open class Locust
+public struct SpecialTokens
 {
-    public class func test()
+    public let unknown:             String
+    public let beginningOfSequence: String
+    public let endOfSequence:       String
+    
+    public init( unknown: String, beginningOfSequence: String, endOfSequence: String )
     {
-        print( "hello, world" )
+        self.unknown             = unknown
+        self.beginningOfSequence = beginningOfSequence
+        self.endOfSequence       = endOfSequence
     }
+    
+    public static let locust = Self(
+        unknown:             "<unk>",
+        beginningOfSequence: "<bos>",
+        endOfSequence:       "<eos>"
+    )
 }

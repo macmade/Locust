@@ -23,5 +23,46 @@
  ******************************************************************************/
 
 import Foundation
-import LocustKit
-import ArgumentParser
+
+public struct WordTokenizer: Tokenizing
+{
+    public init()
+    {}
+    
+    public func tokenize( _ text: String ) -> [ String ]
+    {
+        let state = text.reduce( into: ( tokens: [ String ](), current: "" ) )
+        {
+            state, character in
+            
+            if Self.isWordCharacter( character )
+            {
+                state.current.append( character )
+            }
+            else
+            {
+                if state.current.isEmpty == false
+                {
+                    state.tokens.append( state.current )
+                    
+                    state.current = ""
+                }
+                
+                if character.isWhitespace == false
+                {
+                    state.tokens.append( String( character ) )
+                }
+            }
+        }
+        
+        return state.current.isEmpty ? state.tokens : state.tokens + [ state.current ]
+    }
+    
+    private static func isWordCharacter( _ character: Character ) -> Bool
+    {
+        character.unicodeScalars.allSatisfy
+        {
+            $0.properties.isAlphabetic || $0.properties.numericType != nil
+        }
+    }
+}

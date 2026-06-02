@@ -22,6 +22,7 @@
  * THE SOFTWARE.
  ******************************************************************************/
 
-import Foundation
-import LocustKit
-import ArgumentParser
+public protocol Tokenizing
+{
+    func tokenize( _ text: String ) -> [ String ]
+}

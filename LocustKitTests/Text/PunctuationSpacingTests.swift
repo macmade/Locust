@@ -22,6 +22,27 @@
  * THE SOFTWARE.
  ******************************************************************************/
 
-import Foundation
+import Testing
 import LocustKit
-import ArgumentParser
+
+struct PunctuationSpacingTests
+{
+    @Test
+    func providesEnglishDefaults() async throws
+    {
+        #expect( PunctuationSpacing.english.closingWithoutLeadingSpace  == [ ".", ",", "!", "?", ":", ";", ")", "]", "}" ] )
+        #expect( PunctuationSpacing.english.openingWithoutTrailingSpace == [ "(", "[", "{" ] )
+    }
+    
+    @Test
+    func storesCustomValues() async throws
+    {
+        let punctuationSpacing = PunctuationSpacing(
+            closingWithoutLeadingSpace:  [ "~" ],
+            openingWithoutTrailingSpace: [ "^" ]
+        )
+        
+        #expect( punctuationSpacing.closingWithoutLeadingSpace  == [ "~" ] )
+        #expect( punctuationSpacing.openingWithoutTrailingSpace == [ "^" ] )
+    }
+}

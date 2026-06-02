@@ -22,6 +22,41 @@
  * THE SOFTWARE.
  ******************************************************************************/
 
-import Foundation
+import Testing
 import LocustKit
-import ArgumentParser
+
+struct WordTokenizerTests
+{
+    @Test
+    func splitsWordsAndPunctuation() async throws
+    {
+        let tokenizer = WordTokenizer()
+        
+        #expect( tokenizer.tokenize( "Hello, world!" ) == [ "Hello", ",", "world", "!" ] )
+    }
+    
+    @Test
+    func preservesCasing() async throws
+    {
+        let tokenizer = WordTokenizer()
+        
+        #expect( tokenizer.tokenize( "Hello HELLO hello" ) == [ "Hello", "HELLO", "hello" ] )
+    }
+    
+    @Test
+    func ignoresWhitespaceAndNewlines() async throws
+    {
+        let tokenizer = WordTokenizer()
+        
+        #expect( tokenizer.tokenize( "One\t two\n\nthree" ) == [ "One", "two", "three" ] )
+    }
+    
+    @Test
+    func handlesEmptyInput() async throws
+    {
+        let tokenizer = WordTokenizer()
+        
+        #expect( tokenizer.tokenize( "" ).isEmpty )
+        #expect( tokenizer.tokenize( " \n\t " ).isEmpty )
+    }
+}
