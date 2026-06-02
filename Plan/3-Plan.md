@@ -412,6 +412,8 @@ The binary reader should validate:
 
 Unit tests should live in focused files named after the production type or behavior they cover, such as `Text/WordTokenizerTests.swift` and `Text/WordDetokenizerTests.swift`. Prefer mirroring the `LocustKit` source directories in `LocustKitTests`; avoid collecting unrelated test suites in a generic shared test file.
 
+Every milestone should update `README.md` as part of completion. Keep the README aligned with the current implementation status, available APIs or CLI behavior, defaults, examples, and any remaining planned work. Update `README.md` during each milestone rather than deferring documentation updates to Milestone 12.
+
 ### Milestone 1: Tokenizer And Detokenizer
 
 Tests first:
