@@ -47,6 +47,8 @@
 /* Begin PBXFileReference section */
 		0585BFD52FCF659E001AFA3E /* bloodborne-npc-dialogues.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bloodborne-npc-dialogues.txt"; sourceTree = "<group>"; };
 		0585BFD72FCF65C4001AFA3E /* 1-Prompt.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "1-Prompt.md"; sourceTree = "<group>"; };
+		0585BFD92FCF675C001AFA3E /* 2-Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "2-Questions.md"; sourceTree = "<group>"; };
+		0585BFDA2FCF78BA001AFA3E /* 3-Plan.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "3-Plan.md"; sourceTree = "<group>"; };
 		05AFE2462FCEB8A700624811 /* Locust */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Locust; sourceTree = BUILT_PRODUCTS_DIR; };
 		05AFE2522FCEBA7000624811 /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
 		05AFE2532FCEBA7000624811 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -145,6 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				0585BFD72FCF65C4001AFA3E /* 1-Prompt.md */,
+				0585BFD92FCF675C001AFA3E /* 2-Questions.md */,
+				0585BFDA2FCF78BA001AFA3E /* 3-Plan.md */,
 			);
 			path = Plan;
 			sourceTree = "<group>";
