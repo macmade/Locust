@@ -25,8 +25,10 @@
 import Testing
 import LocustKit
 
+/// Tests for the word tokenizer.
 struct WordTokenizerTests
 {
+    /// Verifies that words and punctuation become separate tokens.
     @Test
     func splitsWordsAndPunctuation() async throws
     {
@@ -35,6 +37,7 @@ struct WordTokenizerTests
         #expect( tokenizer.tokenize( "Hello, world!" ) == [ "Hello", ",", "world", "!" ] )
     }
     
+    /// Verifies that tokenization does not alter letter casing.
     @Test
     func preservesCasing() async throws
     {
@@ -43,6 +46,7 @@ struct WordTokenizerTests
         #expect( tokenizer.tokenize( "Hello HELLO hello" ) == [ "Hello", "HELLO", "hello" ] )
     }
     
+    /// Verifies that whitespace separates tokens without being emitted.
     @Test
     func ignoresWhitespaceAndNewlines() async throws
     {
@@ -51,6 +55,7 @@ struct WordTokenizerTests
         #expect( tokenizer.tokenize( "One\t two\n\nthree" ) == [ "One", "two", "three" ] )
     }
     
+    /// Verifies that empty and whitespace-only input produce no tokens.
     @Test
     func handlesEmptyInput() async throws
     {

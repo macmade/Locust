@@ -22,7 +22,12 @@
  * THE SOFTWARE.
  ******************************************************************************/
 
+/// Converts token strings back into displayable text.
 public protocol Detokenizing
 {
+    /// Reconstructs display text from the supplied tokens.
+    ///
+    /// - Parameter tokens: The tokens to join into text.
+    /// - Returns: The reconstructed display text.
     func detokenize( _ tokens: [ String ] ) -> String
 }

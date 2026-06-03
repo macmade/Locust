@@ -24,11 +24,19 @@
 
 import Foundation
 
+/// A word-based tokenizer that separates words from punctuation.
 public struct WordTokenizer: Tokenizing
 {
+    /// Creates a word tokenizer.
     public init()
     {}
     
+    /// Splits text into word and punctuation tokens.
+    ///
+    /// Whitespace is treated as a separator and is not emitted as a token.
+    ///
+    /// - Parameter text: The source text to tokenize.
+    /// - Returns: The word and punctuation tokens in source order.
     public func tokenize( _ text: String ) -> [ String ]
     {
         let state = text.reduce( into: ( tokens: [ String ](), current: "" ) )
@@ -58,6 +66,10 @@ public struct WordTokenizer: Tokenizing
         return state.current.isEmpty ? state.tokens : state.tokens + [ state.current ]
     }
     
+    /// Returns whether the character should be grouped into a word token.
+    ///
+    /// - Parameter character: The character to classify.
+    /// - Returns: `true` when the character is alphabetic or numeric.
     private static func isWordCharacter( _ character: Character ) -> Bool
     {
         character.unicodeScalars.allSatisfy

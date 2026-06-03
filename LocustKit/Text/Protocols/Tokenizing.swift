@@ -22,7 +22,12 @@
  * THE SOFTWARE.
  ******************************************************************************/
 
+/// Converts source text into a sequence of token strings.
 public protocol Tokenizing
 {
+    /// Tokenizes the supplied text.
+    ///
+    /// - Parameter text: The source text to split into tokens.
+    /// - Returns: The token strings produced from the source text.
     func tokenize( _ text: String ) -> [ String ]
 }

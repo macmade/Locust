@@ -25,8 +25,10 @@
 import Testing
 import LocustKit
 
+/// Tests for the word detokenizer.
 struct WordDetokenizerTests
 {
+    /// Verifies that common punctuation is reconstructed without awkward spacing.
     @Test
     func detokenizesCommonPunctuation() async throws
     {
@@ -36,6 +38,7 @@ struct WordDetokenizerTests
         #expect( detokenizer.detokenize( [ "Look", "(", "inside", ")", "." ] ) == "Look (inside)." )
     }
     
+    /// Verifies that beginning and end sequence tokens affect reconstruction.
     @Test
     func handlesSpecialTokens() async throws
     {
@@ -44,6 +47,7 @@ struct WordDetokenizerTests
         #expect( detokenizer.detokenize( [ SpecialTokens.locust.beginningOfSequence, "Hello", SpecialTokens.locust.endOfSequence, "after-eos" ] ) == "Hello" )
     }
     
+    /// Verifies that callers can provide a custom special-token set.
     @Test
     func supportsInjectedSpecialTokens() async throws
     {
@@ -57,6 +61,7 @@ struct WordDetokenizerTests
         #expect( detokenizer.detokenize( [ "[start]", "Hello", "[end]", "ignored" ] ) == "Hello" )
     }
     
+    /// Verifies that callers can provide custom punctuation spacing rules.
     @Test
     func supportsInjectedPunctuationSpacing() async throws
     {
@@ -65,6 +70,7 @@ struct WordDetokenizerTests
         #expect( detokenizer.detokenize( [ "Hello", "~", "^", "world" ] ) == "Hello~ ^world" )
     }
     
+    /// Verifies that empty token input produces empty text.
     @Test
     func handlesEmptyInput() async throws
     {

@@ -25,8 +25,10 @@
 import Testing
 import LocustKit
 
+/// Tests for punctuation spacing configuration.
 struct PunctuationSpacingTests
 {
+    /// Verifies the default English-like punctuation spacing rules.
     @Test
     func providesEnglishDefaults() async throws
     {
@@ -34,6 +36,7 @@ struct PunctuationSpacingTests
         #expect( PunctuationSpacing.english.openingWithoutTrailingSpace == [ "(", "[", "{" ] )
     }
     
+    /// Verifies that custom punctuation spacing values are stored unchanged.
     @Test
     func storesCustomValues() async throws
     {

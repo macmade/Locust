@@ -22,17 +22,30 @@
  * THE SOFTWARE.
  ******************************************************************************/
 
+/// A detokenizer that reconstructs simple English-like spacing around punctuation.
 public struct WordDetokenizer: Detokenizing
 {
+    /// Special tokens that affect generated text reconstruction.
     private let specialTokens:      SpecialTokens
+    
+    /// Punctuation spacing rules used when joining adjacent tokens.
     private let punctuationSpacing: PunctuationSpacing
     
+    /// Creates a word detokenizer.
+    ///
+    /// - Parameters:
+    ///   - specialTokens: Special tokens that should be skipped or stop reconstruction.
+    ///   - punctuationSpacing: Rules for suppressing spaces around punctuation.
     public init( specialTokens: SpecialTokens = .locust, punctuationSpacing: PunctuationSpacing = .english )
     {
         self.specialTokens      = specialTokens
         self.punctuationSpacing = punctuationSpacing
     }
     
+    /// Reconstructs text from tokens using the configured special-token and punctuation rules.
+    ///
+    /// - Parameter tokens: The tokens to join.
+    /// - Returns: The reconstructed text.
     public func detokenize( _ tokens: [ String ] ) -> String
     {
         tokens.reduce( into: ( output: "", previousToken: String?.none, isComplete: false ) )
@@ -68,6 +81,12 @@ public struct WordDetokenizer: Detokenizing
         .output
     }
     
+    /// Returns whether a space is needed before a token.
+    ///
+    /// - Parameters:
+    ///   - token: The token about to be appended.
+    ///   - previousToken: The most recent emitted token, if any.
+    /// - Returns: `true` when a normal leading space should be inserted.
     private func requiresLeadingSpace( before token: String, after previousToken: String? ) -> Bool
     {
         if self.punctuationSpacing.closingWithoutLeadingSpace.contains( token )

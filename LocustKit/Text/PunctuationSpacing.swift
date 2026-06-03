@@ -22,17 +22,27 @@
  * THE SOFTWARE.
  ******************************************************************************/
 
+/// Rules that control where spaces are suppressed around punctuation tokens.
 public struct PunctuationSpacing
 {
+    /// Tokens that should not receive a leading space.
     public let closingWithoutLeadingSpace:  Set< String >
+    
+    /// Tokens after which the next token should not receive a leading space.
     public let openingWithoutTrailingSpace: Set< String >
     
+    /// Creates punctuation spacing rules.
+    ///
+    /// - Parameters:
+    ///   - closingWithoutLeadingSpace: Tokens that attach to the previous token.
+    ///   - openingWithoutTrailingSpace: Tokens that attach to the following token.
     public init( closingWithoutLeadingSpace: Set< String >, openingWithoutTrailingSpace: Set< String > )
     {
         self.closingWithoutLeadingSpace  = closingWithoutLeadingSpace
         self.openingWithoutTrailingSpace = openingWithoutTrailingSpace
     }
     
+    /// Default spacing rules for common English punctuation.
     public static let english = Self(
         closingWithoutLeadingSpace:  [ ".", ",", "!", "?", ":", ";", ")", "]", "}" ],
         openingWithoutTrailingSpace: [ "(", "[", "{" ]

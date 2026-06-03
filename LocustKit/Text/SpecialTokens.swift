@@ -22,12 +22,24 @@
  * THE SOFTWARE.
  ******************************************************************************/
 
+/// Token strings reserved for model and dataset control flow.
 public struct SpecialTokens
 {
+    /// Token used when source text contains a token outside the vocabulary.
     public let unknown:             String
+    
+    /// Token inserted before the first content token in a sequence.
     public let beginningOfSequence: String
+    
+    /// Token inserted after the final content token in a sequence.
     public let endOfSequence:       String
     
+    /// Creates a special-token set.
+    ///
+    /// - Parameters:
+    ///   - unknown: Token used for out-of-vocabulary text.
+    ///   - beginningOfSequence: Token used to mark sequence starts.
+    ///   - endOfSequence: Token used to mark sequence ends.
     public init( unknown: String, beginningOfSequence: String, endOfSequence: String )
     {
         self.unknown             = unknown
@@ -35,6 +47,7 @@ public struct SpecialTokens
         self.endOfSequence       = endOfSequence
     }
     
+    /// Default special tokens used by Locust.
     public static let locust = Self(
         unknown:             "<unk>",
         beginningOfSequence: "<bos>",

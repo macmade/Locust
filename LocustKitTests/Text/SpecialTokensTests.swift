@@ -25,8 +25,10 @@
 import Testing
 import LocustKit
 
+/// Tests for special-token configuration.
 struct SpecialTokensTests
 {
+    /// Verifies the default Locust special-token strings.
     @Test
     func providesLocustDefaults() async throws
     {
@@ -35,6 +37,7 @@ struct SpecialTokensTests
         #expect( SpecialTokens.locust.endOfSequence       == "<eos>" )
     }
     
+    /// Verifies that custom special-token values are stored unchanged.
     @Test
     func storesCustomValues() async throws
     {

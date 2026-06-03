@@ -30,6 +30,7 @@ This plan is based on `Plan/1-Prompt.md` and the answers in `Plan/2-Questions.md
 - Prefer `reduce` or `reduce(into:)` for stateful collection-building logic instead of declaring mutable accumulator variables in the calling function.
 - Keep functional code readable. If stateful accumulation is needed, make the state explicit and use focused helper methods rather than dense nested closures.
 - Avoid introducing helper state types for small single-use transformations unless they materially improve readability or are reused.
+- Document all Swift code with SwiftDoc comments, including private types, private stored properties, private helper methods, and tests.
 - Define shared configuration values for special tokens and other domain strings. Do not inline magic token values such as `<unk>`, `<bos>`, or `<eos>` in production code or tests.
 - Use plain loops only when they make low-level numerical code materially clearer, especially in later `Math` and `Layers` implementations. In those cases, keep the loop local and covered by focused tests.
 
