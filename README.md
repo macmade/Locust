@@ -13,7 +13,7 @@ Locust
 > Fear not, the dark, my friend.  
 > And let the feast begin.
 
-Locust is a Swift/Xcode language-model playground for macOS. The project is structured around a thin `Locust` command-line executable and a reusable `LocustKit` library that owns tokenization, vocabulary handling, dataset preparation, deterministic sampling, model training, inference, and serialization.
+Locust is a Swift/Xcode language-model playground for macOS. The project is structured around a thin `locust` command-line executable and a reusable `LocustKit` library that owns tokenization, vocabulary handling, dataset preparation, deterministic sampling, model training, inference, and serialization.
 
 The first implementation target is an end-to-end n-gram next-token baseline. Transformer components are planned after the baseline CLI, model persistence, and tests are stable.
 
@@ -24,7 +24,7 @@ Current implementation:
 
 - `LocustKit` contains the first text-processing pieces: `WordTokenizer`, `WordDetokenizer`, `SpecialTokens`, `PunctuationSpacing`, and the `Tokenizing` and `Detokenizing` protocols.
 - `LocustKitTests` contains focused tests for those text components.
-- `Locust` is currently a command-line executable target that imports `LocustKit` and `ArgumentParser`.
+- `Locust` is currently a command-line executable target that builds the `locust` product and imports `LocustKit` and `ArgumentParser`.
 
 Planned baseline:
 
@@ -74,7 +74,7 @@ Planned options:
 Architecture
 ------------
 
-`Locust` is intended to stay small:
+The `locust` executable is intended to stay small:
 
 - Parse command-line arguments.
 - Read corpus files and write model files.

@@ -1,4 +1,4 @@
-# Locust Implementation Plan
+# Locust implementation plan
 
 This plan is based on `Plan/1-Prompt.md` and the answers in `Plan/2-Questions.md`.
 
@@ -6,7 +6,7 @@ This plan is based on `Plan/1-Prompt.md` and the answers in `Plan/2-Questions.md
 
 - Build an end-to-end n-gram baseline first, then add transformer components incrementally.
 - Keep all language-model behavior in `LocustKit`.
-- Keep the `Locust` executable as a thin CLI wrapper.
+- Keep the `Locust` target building the `locust` executable as a thin CLI wrapper.
 - Use `swift-argument-parser` for the CLI, since it is already available in the Xcode project.
 - Use only the Swift standard library and existing Apple frameworks beyond that existing dependency.
 - Use `Double` for model math initially.
@@ -517,7 +517,7 @@ Tests first where practical:
 
 Implementation:
 
-- Replace placeholder `Locust.test()` call with an `ArgumentParser` command.
+- Replace the placeholder executable startup call with an `ArgumentParser` command.
 - Implement `--create`, `--output`, and `--format`.
 - Print basic training progress and save path.
 

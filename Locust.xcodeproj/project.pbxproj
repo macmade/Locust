@@ -586,14 +586,14 @@
 		05AFE24E2FCEB8A700624811 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = locust;
 			};
 			name = Debug;
 		};
 		05AFE24F2FCEB8A700624811 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = locust;
 			};
 			name = Release;
 		};
