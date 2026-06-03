@@ -39,6 +39,7 @@ public struct WordTokenizer: Tokenizing
     /// - Returns: The word and punctuation tokens in source order.
     public func tokenize( _ text: String ) -> [ String ]
     {
+        // Track the current word separately so punctuation can flush it before becoming its own token.
         let state = text.reduce( into: ( tokens: [ String ](), current: "" ) )
         {
             state, character in

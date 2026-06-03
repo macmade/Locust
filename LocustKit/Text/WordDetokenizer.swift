@@ -48,6 +48,7 @@ public struct WordDetokenizer: Detokenizing
     /// - Returns: The reconstructed text.
     public func detokenize( _ tokens: [ String ] ) -> String
     {
+        // Keep the previous emitted token so punctuation spacing can be decided one token at a time.
         tokens.reduce( into: ( output: "", previousToken: String?.none, isComplete: false ) )
         {
             state, token in

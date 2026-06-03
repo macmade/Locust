@@ -31,6 +31,7 @@ This plan is based on `Plan/1-Prompt.md` and the answers in `Plan/2-Questions.md
 - Keep functional code readable. If stateful accumulation is needed, make the state explicit and use focused helper methods rather than dense nested closures.
 - Avoid introducing helper state types for small single-use transformations unless they materially improve readability or are reused.
 - Document all Swift code with SwiftDoc comments, including private types, private stored properties, private helper methods, and tests.
+- Add concise inline comments for complex implementation details, especially non-obvious state transitions, numerical algorithms, serialization layouts, and training logic. Avoid comments that merely restate straightforward code.
 - Define shared configuration values for special tokens and other domain strings. Do not inline magic token values such as `<unk>`, `<bos>`, or `<eos>` in production code or tests.
 - Use plain loops only when they make low-level numerical code materially clearer, especially in later `Math` and `Layers` implementations. In those cases, keep the loop local and covered by focused tests.
 
