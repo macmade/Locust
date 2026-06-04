@@ -73,9 +73,28 @@ public struct WordTokenizer: Tokenizing
     /// - Returns: `true` when the character is alphabetic or numeric.
     private static func isWordCharacter( _ character: Character ) -> Bool
     {
-        character.unicodeScalars.allSatisfy
+        let scalars = character.unicodeScalars
+        
+        return scalars.contains
         {
             $0.properties.isAlphabetic || $0.properties.numericType != nil
+        }
+        && scalars.allSatisfy
+        {
+            $0.properties.isAlphabetic || $0.properties.numericType != nil || Self.isCombiningMark( $0 )
+        }
+    }
+    
+    /// Returns whether the scalar is a Unicode mark that combines with a base character.
+    ///
+    /// - Parameter scalar: The Unicode scalar to classify.
+    /// - Returns: `true` when the scalar is a non-spacing, spacing, or enclosing mark.
+    private static func isCombiningMark( _ scalar: Unicode.Scalar ) -> Bool
+    {
+        switch scalar.properties.generalCategory
+        {
+            case .nonspacingMark, .spacingMark, .enclosingMark: true
+            default:                                            false
         }
     }
 }
