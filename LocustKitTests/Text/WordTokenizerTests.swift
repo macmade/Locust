@@ -55,6 +55,51 @@ struct WordTokenizerTests
         #expect( tokenizer.tokenize( "One\t two\n\nthree" ) == [ "One", "two", "three" ] )
     }
     
+    /// Verifies that apostrophes remain separate punctuation tokens.
+    @Test
+    func splitsContractionsAtApostrophes() async throws
+    {
+        let tokenizer = WordTokenizer()
+        
+        #expect( tokenizer.tokenize( "Don't stop." ) == [ "Don", "'", "t", "stop", "." ] )
+    }
+    
+    /// Verifies that hyphenated text keeps hyphens as punctuation tokens.
+    @Test
+    func splitsHyphenatedWordsAtHyphens() async throws
+    {
+        let tokenizer = WordTokenizer()
+        
+        #expect( tokenizer.tokenize( "well-known state-of-the-art" ) == [ "well", "-", "known", "state", "-", "of", "-", "the", "-", "art" ] )
+    }
+    
+    /// Verifies that decimal points and currency symbols are emitted separately.
+    @Test
+    func splitsDecimalsAndSymbols() async throws
+    {
+        let tokenizer = WordTokenizer()
+        
+        #expect( tokenizer.tokenize( "3.14 costs $5.00" ) == [ "3", ".", "14", "costs", "$", "5", ".", "00" ] )
+    }
+    
+    /// Verifies that precomposed accented letters remain part of word tokens.
+    @Test
+    func keepsPrecomposedAccentedLettersInWords() async throws
+    {
+        let tokenizer = WordTokenizer()
+        
+        #expect( tokenizer.tokenize( "Caf\u{00E9} na\u{00EF}ve" ) == [ "Caf\u{00E9}", "na\u{00EF}ve" ] )
+    }
+    
+    /// Verifies that decomposed accents remain attached to their base letters.
+    @Test
+    func keepsCombiningMarksWithBaseLetters() async throws
+    {
+        let tokenizer = WordTokenizer()
+        
+        #expect( tokenizer.tokenize( "Cafe\u{0301} deja\u{0300}" ) == [ "Cafe\u{0301}", "deja\u{0300}" ] )
+    }
+    
     /// Verifies that empty and whitespace-only input produce no tokens.
     @Test
     func handlesEmptyInput() async throws

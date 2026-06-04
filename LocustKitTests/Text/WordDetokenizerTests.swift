@@ -47,6 +47,24 @@ struct WordDetokenizerTests
         #expect( detokenizer.detokenize( [ SpecialTokens.locust.beginningOfSequence, "Hello", SpecialTokens.locust.endOfSequence, "after-eos" ] ) == "Hello" )
     }
     
+    /// Verifies that unknown tokens are displayed when they appear in output.
+    @Test
+    func printsUnknownTokens() async throws
+    {
+        let detokenizer = WordDetokenizer()
+        
+        #expect( detokenizer.detokenize( [ SpecialTokens.locust.beginningOfSequence, "Hello", SpecialTokens.locust.unknown, "!" ] ) == "Hello <unk>!" )
+    }
+    
+    /// Verifies spacing across adjacent opening and closing punctuation pairs.
+    @Test
+    func detokenizesAdjacentPunctuationPairs() async throws
+    {
+        let detokenizer = WordDetokenizer()
+        
+        #expect( detokenizer.detokenize( [ "Look", "(", "inside", ")", "[", "now", "]", "." ] ) == "Look (inside) [now]." )
+    }
+    
     /// Verifies that callers can provide a custom special-token set.
     @Test
     func supportsInjectedSpecialTokens() async throws
