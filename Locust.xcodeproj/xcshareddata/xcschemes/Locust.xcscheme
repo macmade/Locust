@@ -16,7 +16,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "05AFE2452FCEB8A700624811"
-               BuildableName = "Locust"
+               BuildableName = "locust"
                BlueprintName = "Locust"
                ReferencedContainer = "container:Locust.xcodeproj">
             </BuildableReference>
@@ -51,7 +51,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "05AFE2452FCEB8A700624811"
-            BuildableName = "Locust"
+            BuildableName = "locust"
             BlueprintName = "Locust"
             ReferencedContainer = "container:Locust.xcodeproj">
          </BuildableReference>
@@ -68,7 +68,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "05AFE2452FCEB8A700624811"
-            BuildableName = "Locust"
+            BuildableName = "locust"
             BlueprintName = "Locust"
             ReferencedContainer = "container:Locust.xcodeproj">
          </BuildableReference>
